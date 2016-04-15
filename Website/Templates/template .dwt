@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Lauren Kalina</title>
+<!-- TemplateEndEditable -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+<link href="../Styles /blue.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="navigation">
+    <a class="nav-button" href="../index.html">Home</a> <a class="nav-button" href="../my-personal-brand/index.html">My Personal Brand</a> <a class= "nav-button" href="../who-am-i/index.html">My Biography</a> <a class="nav-button" href="../my-college-life/index.html">My College Life</a> <a class="nav-button" href="../my-career/index.html">My Career</a> <a class="nav-button" href="../interviews/index.html">Interviews</a>
+  </div>
+  <a href="Content"> <!-- TemplateBeginEditable name="Content " -->
+  <p>&nbsp;</p>
+  <!-- TemplateEndEditable -->
+</div>
+</body>
+</html>

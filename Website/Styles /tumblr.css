@@ -1,0 +1,669 @@
+/* C<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+
+RUN theme by
+F L O R E L S  (✿◠‿◠)   ////
+started april 09 2016
+finished april 09, 2016
+published april 10, 2016
+
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+
+<link rel="icon" href="{Favicon}"/>
+<title>{Title}</title>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+
+<meta name="image:background" content="" />
+
+<meta name="color:background" content="#fff" />
+<meta name="color:blog title" content="#888888" />
+<meta name="color:blog title border" content="#ace7d8" />
+<meta name="color:description" content="#888888" />
+<meta name="color:description link" content="#888888" />
+<meta name="color:link" content="#888888" />
+<meta name="color:nav link" content="#888888" />
+<meta name="color:nav link hover" content="#cccccc" />
+<meta name="color:permalink" content="#888888" />
+<meta name="color:permalink border" content="#ace7d8" />
+<meta name="color:permalink hover" content="#cccccc" />
+<meta name="color:post background" content="#fff" />
+<meta name="color:post border" content="#cccccc" />
+<meta name="color:post shadow" content="#e5e5e5" />
+<meta name="color:scrollbar" content="#888888" />
+<meta name="color:sidebar background" content="#fff" />
+<meta name="color:text" content="#888888" />
+<meta name="color:tooltip" content="#888888" />
+
+<meta name="if:2 columns" content="1"/>
+<meta name="if:post border" content="0"/>
+<meta name="if:post shadow" content="0"/>
+<meta name="if:sidebar background" content="1"/>
+<meta name="if:tiled background image" content="0"/>
+<meta name="if:custom link 1" content="1" />
+<meta name="if:custom link 2" content="1" />
+<meta name="if:custom link 3" content="1" />
+
+<meta name="text:ask link" content="/ask" />
+<meta name="text:link 1 url" content="/" />
+<meta name="text:link 1 title" content="link 1" />
+<meta name="text:link 2 url" content="/" />
+<meta name="text:link 2 title" content="link 2" />
+<meta name="text:link 3 url" content="/" />
+<meta name="text:link 3 title" content="link 3" />
+
+<script type='text/javascript' src='http://static.tumblr.com/d0qlne1/DiAl6ekb7/jquery-1.4.2.min.js'></script>
+
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Open+Sans::latin', 'Roboto::latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
+  
+  
+{block:IndexPage}
+<script src="http://static.tumblr.com/twte3d7/H8Glm663z/masonry.js"></script>
+<script src="http://static.tumblr.com/twte3d7/qNulm663d/infinite.js"></script>
+ 
+<script type="text/javascript">
+$(window).load(function () {
+$('#posts').masonry(),
+$('.masonryWrap').infinitescroll({
+navSelector : "div.navigation",
+// selector for the paged navigation (it will be hidden)
+nextSelector : ".navigation a#next",
+// selector for the NEXT link (to page 2)
+itemSelector : ".post",
+// selector for all items you'll retrieve
+bufferPx : 10000,
+extraScrollPx: 10000,
+loadingImg : "http://static.tumblr.com/bcpenwm/o5Nmy3k0o/florels.gif",
+loadingText : "<em></em>",
+},
+// call masonry as a callback.
+function() { $('#posts').masonry({ appendedContent: $(this) }); }
+);
+});
+</script>
+{/block:IndexPage}
+
+
+
+<div class="navigation">{block:Pagination}{block:NextPage}<span id="page_nav"><span onclick='return false;'><a style="float:right;opacity:0;" href="{NextPage}" id="next"></a>{/block:NextPage}{block:PreviousPage}<a style="float:right;opacity:0;" href="{PreviousPage}"></a></span></span>{/block:PreviousPage}{/block:Pagination}</div>
+
+
+
+<script src="http://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+<script>
+   (function($){
+       $(document).ready(function(){
+           $("[title]").style_my_tooltips({
+               tip_follows_cursor:true,
+               tip_delay_time:0,
+               tip_fade_speed:0
+           }
+               );
+       });
+   })(jQuery);
+</script>
+
+
+
+
+<style type="text/css">
+
+ 
+iframe#tumblr_controls {
+top: 0% !important;
+right:0% !important;
+position: fixed !important;}
+
+
+body {
+    margin:0px;
+    padding:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size:11px;
+    color:{color:text};
+    background-image:url('{image:background}');
+    background-attachment:fixed;
+{block:ifnottiledbackgroundimage}
+    background-size:cover;
+{/block:ifnottiledbackgroundimage}
+    background-color:{color:background};}
+
+#s-m-t-tooltip{
+    font-size: 9px; 
+    color:{color:tooltip}; 
+    background-color:#fff;
+    text-align: center;
+    letter-spacing:1px;
+    min-width:50px;
+    max-width:120px;
+	overflow:auto;
+	font-style:italic;
+    display: none;
+    position: absolute;
+    z-index: 999999999999;
+    padding:5px;
+    margin:30px 0 15px 10px;
+-webkit-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;}
+
+a {
+    color:{color:link};
+    text-decoration:underline;}
+
+a:hover {
+    text-decoration:none;}
+
+/**  theme by F L O R E L S  (✿◠‿◠)   ////  **/
+
+a:active,a:focus {outline:0;}
+
+::-webkit-scrollbar-thumb{ 
+    background-color:{color:scrollbar};
+    border:6px solid {color:background};
+    height:6px;}
+
+::-webkit-scrollbar { 
+    height:13px;
+    width:13px; 
+    background-color:{color:background};}
+    
+#sidebar {
+    z-index:4;
+    height:auto;
+    top:100px;
+    padding:20px;
+    left:0px;
+    width:180px;
+    position:fixed;
+{block:ifsidebarbackground}
+    background-color:{color:sidebar background};
+{/block:ifsidebarbackground}}
+
+#blogtitle{
+    position:relative;
+    height:auto;
+    z-index:5;
+    padding-bottom:2px;
+    color:{color:blog title};
+    font-size:23px;
+    border-bottom:1px solid {color:blog title border};
+    text-align:left;
+    width:auto;}   
+
+#description {
+    text-align:justify;
+    color:{color:description};
+    position:relative;
+    z-index:6;
+    width:180px;
+    margin:5px 0 30px 0;}
+    
+#description a{
+    z-index:7;
+    position:relative;
+    color:{color:description link};
+    text-decoration:underline;}
+
+#description a:hover{
+    text-decoration:none;}
+
+#navlinks {
+    position:relative;
+    z-index:5;
+    color:{color:nav link};
+    line-height:170%;
+    text-align:left;}
+
+#navlinks a {
+    color:{color:nav link};
+    text-decoration:none;
+    font-size:1em;
+    white-space:nowrap;
+    margin:0 10px 0 0;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;}
+
+#navlinks a:hover {
+    color:{color:nav link hover};}
+    
+.notes {
+    padding-left:20px;
+    padding-top:5px;
+    position:relative;
+    float:left;
+    font-size:1em;}
+   
+li.notes {
+    float:left;
+    width:400px;
+    padding-left:5px;
+    margin-top:10px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    list-style-type:none;
+    font-weight:normal;
+    font-size:1em;
+    text-transform:none;}
+  
+/**  theme by F L O R E L S  (✿◠‿◠)   ////  **/
+
+li.note {
+    padding-top:2px;
+    opacity:1;}
+   
+li.note img.avatar {
+    width:14px;
+    height:14px;}
+
+.permalink {
+    color:{color:permalink};
+    position:relative;
+    display:block;
+    font-size:1em;
+    opacity:1;
+    right:0;
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+    margin:15px 0 10px 0;
+{block:ifpostbg}
+    background:{color:post background};
+{/block:ifpostbg}}
+ 
+.permalink a{
+    color:{color:permalink};
+    margin:0 3px;
+    text-decoration:none;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;}
+ 
+.permalink a:hover{
+    color:{color:permalink hover};}
+
+.headings{
+    font-size:1.5em;
+    text-align:left;
+    font-style:italic;}
+
+.audiopost {
+{block:IndexPage}
+    width:250px;
+    padding-bottom:10px;
+{/block:IndexPage}
+{block:PermalinkPage}
+    width:400px;
+    padding-bottom:110px;
+{/block:PermalinkPage}}
+ 
+.albumart {
+    position:absolute;
+{block:IndexPage}
+    width:50px;
+    height:50px;
+{/block:IndexPage}
+{block:PermalinkPage}
+    width:150px;
+    height:150px;
+{/block:PermalinkPage}}
+ 
+.albumart img {
+    float:left;
+{block:IndexPage}
+    width:50px;
+    height:50px;
+{/block:IndexPage}
+{block:PermalinkPage}
+    width:150px;
+    height:150px;
+{/block:PermalinkPage}}
+
+/**  theme by F L O R E L S  (✿◠‿◠)   ////  **/
+
+.playbox {
+    opacity:0.6;
+    width:27px;
+    height:30px;
+    overflow:hidden;
+    position:absolute;
+    z-index:2;
+{block:IndexPage}
+    margin-left:11px;
+    margin-top:12px;
+{block:IndexPage}
+{block:PermalinkPage}
+    margin-left:60px;
+    margin-top:61px;
+{/block:PermalinkPage}}
+
+.info {
+    margin-top:2px;
+    line-height:12px;
+    font-size:0.9em;
+    text-transform:uppercase;
+{block:IndexPage}
+    margin-left:58px;
+{block:IndexPage}
+{block:PermalinkPage}
+    margin-left:158px;
+{/block:PermalinkPage}}
+
+#posts { 
+    position:absolute;
+    left:50%;
+    z-index:1;
+    top:40px;
+{block:IndexPage}
+    padding:12px 12px 100px 12px;
+        {block:ifnot2columns}
+            width:894px;
+            margin-left:-330px;
+        {/block:ifnot2columns}
+        {block:if2columns}
+            width:596px;
+            margin-left:-250px;
+        {/block:if2columns}
+{/block:IndexPage}
+{block:PermalinkPage}
+    margin-left:-215px;
+    width:400px;
+    padding:15px 15px 55px 15px;
+{block:ifpostborder}
+        border:1px solid {color:post border};
+{/block:ifpostborder}
+{block:ifpostbackground}
+    background:{color:post background}; 
+{/block:ifpostbackground}
+{/block:PermalinkPage}}
+
+.post {
+{block:IndexPage}
+    margin:15px;
+    padding:8px;
+    width:250px;
+        {block:ifnotpostborder}
+            border:1px solid rgba(0,0,0,0);
+        {/block:ifnotpostborder}
+        {block:ifpostborder}
+            border:1px solid {color:post border};
+            border-radius:{text:post border radius};
+        {/block:ifpostborder}
+        {block:ifpostshadow}
+            box-shadow:3px 3px {color:post shadow};
+        {/block:ifpostshadow}
+{/block:IndexPage}
+{block:PermalinkPage}
+    width:400px;
+{/block:PermalinkPage}
+    float:left;
+    position:relative;
+    background:{color:post background};
+    font-size:1em;
+    color:{color:text};}
+
+.post img{
+    max-width:100%;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;}
+    
+.photo {
+    height:auto;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out;}
+
+.quote {
+    text-align:center;
+    font-size:1.2em;}
+
+.quotesource {
+    text-align:right;}
+
+/**  theme by F L O R E L S  (✿◠‿◠)   ////  **/
+
+.question {
+    color:{color:text};}
+
+.asker {}
+
+.answer {
+    font-style:italic;
+    padding:0 10px 0 20px;}
+
+.captions {
+    margin-top:-8px;}
+
+ #pleasedontremove{
+     position:fixed;
+     right:5px;
+     z-index:6;
+     top:35px;}
+
+/**  theme by F L O R E L S  (✿◠‿◠)   ////  **/
+
+</style>
+</head>
+
+<body> 
+
+
+<div id="pleasedontremove"><a href="http://florels.tumblr.com/" target="_blank" title="RUN theme by florels"><img src="http://static.tumblr.com/bcpenwm/j7zmzdu17/florels.png"></a></div>
+
+
+<div id="sidebar">
+	<div id="blogtitle">{Title}</div>
+    <div id="description">{Description}</div>
+    <div id="navlinks">
+        01. <a href="/">home</a></br>
+        02. <a href="{text:ask link}">message</a></br>
+        03. <a href="/archive">archive</a></br>
+        {block:ifcustomlink1}04. <a href="{text:link 1 url}">{text:link 1 title}</a></br>{/block:ifcustomlink1}     
+        {block:ifcustomlink2}05. <a href="{text:link 2 url}">{text:link 2 title}</a></br>{/block:ifcustomlink2}
+        {block:ifcustomlink3}06. <a href="{text:link 3 url}">{text:link 3 title}</a></br>{/block:ifcustomlink3}
+        
+        {block:ifnotcustomlink1}{block:ifnotcustomlink2}{block:ifnotcustomlink3}04.{/block:ifnotcustomlink3}{/block:ifnotcustomlink2}{/block:ifnotcustomlink1}{block:ifcustomlink1}{block:ifnotcustomlink2}{block:ifnotcustomlink3}05.{/block:ifnotcustomlink3}{/block:ifnotcustomlink2}{/block:ifcustomlink1}{block:ifcustomlink2}{block:ifcustomlink1}{block:ifnotcustomlink3}06.{/block:ifnotcustomlink3}{/block:ifcustomlink1}{/block:ifcustomlink2}{block:ifcustomlink3}{block:ifcustomlink1}{block:ifcustomlink2}07.{/block:ifcustomlink2}{/block:ifcustomlink1}{/block:ifcustomlink3}
+
+        <a href="http://florels.tumblr.com" title="RUN theme by florels">theme</a>
+</div>
+
+</div>
+
+
+
+
+
+<div id="posts"> 
+
+{block:Posts}
+
+{block:Text} 
+    <div class="post">
+    <div class="headings">{block:Title}{Title}{/block:Title}</div> {Body}
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Text}
+
+
+{block:Photo}
+<div class="post"><div class="photo">
+{block:IndexPage}
+    <a href="{permalink}"><img src="{PhotoURL-250}"alt="{PhotoAlt}"/></a>
+            <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+ 
+{block:PermalinkPage}
+    <img src="{PhotoURL-400}"  alt="{PhotoAlt}"/>
+{/block:PermalinkPage}
+    </div></div>
+{/block:Photo}
+
+
+{block:Photoset}
+<div class="post">
+{block:IndexPage}
+    {Photoset}
+        <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+{block:PermalinkPage}
+    {Photoset-400}
+{/block:PermalinkPage}
+    </div>
+{/block:Photoset}
+
+
+{block:Quote}
+<div class="post">
+    <div class="quote">
+        '<i>{Quote}</i>'
+    </div>
+    <div class="quotesource">
+        — {Source}
+    </div>
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Quote}
+
+
+{block:Link}
+<div class="post">
+    <div class="headings">
+        <a href="{URL}">{Name}</a>
+    </div>
+    {block:Description}{Description}{/block:Description}
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Link}
+
+
+{block:Chat}
+<div class="post">
+        {block:Title}{Title}{/block:Title}<br>
+        {block:Lines}{block:Label}<i>{Label}</i><br> {Line} <br><br>
+        {/block:Label}{/block:Lines}
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Chat}
+
+
+{block:Video}
+<div class="post">
+{block:IndexPage}
+    <div class="video">
+        {Video-250}
+    </div>
+        <div class="permalink">
+            <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+        </div>
+{/block:IndexPage}
+{block:PermalinkPage}
+    {Video-400}
+{/block:PermalinkPage}
+    </div>
+{/block:Video}
+
+
+{block:Audio}
+<div class="post">
+    <div class="audiopost">
+        {block:AlbumArt}
+            <div class="albumart">
+                <img src="{AlbumArtURL}">
+            </div>
+        {/block:AlbumArt}
+        {block:AudioPlayer}
+            <div class="playbox">
+                {AudioPlayerWhite}
+            </div>
+        {/block:AudioPlayer}
+            <div class="info">
+                Artist: <span{block:Artist} style="display:none;"{/block:Artist}>Unknown</span>{block:Artist}{Artist}{/block:Artist}</br>
+                Title: <span{block:TrackName} style="display:none;"{/block:TrackName}>Unknown</span>{block:TrackName}{TrackName}{/block:TrackName}</br>
+                Album: <span{block:Album} style="display:none;"{/block:Album}>Unknown</span>{block:Album}{Album}{/block:Album}{block:PlayCount}</br>
+                Plays: {FormattedPlayCount}{/block:PlayCount}
+            </div>
+        </div>
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Audio}
+
+
+{block:Answer}
+<div class="post">
+    <div class="question">{Asker} said: {Question}</div>
+    <div class="answer">{Answer}</div>
+{block:IndexPage}
+    <div class="permalink">
+        <span style="border-bottom:1px solid {color:permalink border};padding:0 0 3px 0;"><a href="{Permalink}">{NoteCount}</a> <a href="{ReblogURL}">REBLOG</a></span>
+    </div>
+{/block:IndexPage}
+    </div>
+{/block:Answer}
+
+
+{block:PermalinkPage}
+<div class="notes">
+    {block:Date}{Caption}<b>Posted:</b> {TimeAgo}</br>{/block:Date}
+    {block:NoteCount}<b>Notes:</b>{NoteCount}</br>{/block:NoteCount}
+    {block:RebloggedFrom}<b>Reblogged from:</b> <a href="{ReblogParentURL}">{ReblogParentName}</a></br>{/block:RebloggedFrom}
+    {block:ContentSource}<b>Source:</b> <a href="{SourceURL}">{SourceTitle}</a></br>{/block:ContentSource}
+    {block:hastags}<b>Tagged with:</b> {block:tags}#<a href="/tagged/{Tag}">{Tag}</a> {/block:tags}</br>{/block:hastags}
+{PostNotes}</div>
+{/block:PermalinkPage}
+
+
+{/block:posts} 
+
+
+</div></div>
+
+</body>
+    
+</html>SS Document */
+
